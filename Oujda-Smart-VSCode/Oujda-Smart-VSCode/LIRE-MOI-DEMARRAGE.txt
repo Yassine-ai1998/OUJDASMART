@@ -1,0 +1,44 @@
+OUJDA SMART — OUVRIR ET LANCER DANS VS CODE
+
+1. Dans VS Code : Fichier > Ouvrir un dossier > Oujda-Smart-VSCode.
+   Vous pouvez aussi ouvrir Oujda-Smart.code-workspace.
+
+2. Prérequis : Node.js 22 ou 24 avec npm.
+
+3. Ouvrir Terminal > Nouveau terminal pour le backend :
+   cd backend
+   npm install
+   npm run dev
+
+4. Ouvrir un DEUXIÈME terminal depuis le dossier principal :
+   cd frontend
+   npm install
+   npm run dev
+
+5. Ouvrir http://localhost:3102 dans votre navigateur.
+   Si une autre copie du projet fonctionne déjà sur ces ports,
+   l’arrêter avec Ctrl+C dans ses terminaux avant de lancer celle-ci.
+
+Les identifiants de démonstration sont générés au premier lancement :
+backend/.local-accounts.txt
+
+CONTENU DU DOSSIER
+frontend/ : interface React, pages, styles et images.
+backend/ : API Express, authentification, tests et configuration.
+backend/sql/ : schéma PostgreSQL et données SQL de démonstration.
+docs/ : architecture, API, code regroupé, soutenance et captures.
+README.md : documentation détaillée et configuration PostgreSQL/IA.
+
+Cette copie contient les sources. npm install installe les dépendances.
+La base locale et les comptes de démonstration sont créés au démarrage.
+Les secrets et la base de l’installation existante ne sont pas exportés.
+Le fournisseur IA externe est facultatif et doit être configuré.
+
+Prototype académique. Données de vols fictives. Non affilié à l’ONDA.
+
+SUIVI GRATUIT DES AVIONS
+Page : http://localhost:3102/tracking
+OpenSky est active par defaut pour ce prototype academique non commercial.
+Aucune cle API ni adresse email requise. Actualisation : toutes les 5 minutes.
+Guide francais/arabe/anglais : docs/FLIGHT-TRACKING.md.
+Le tableau /flights reste une demonstration distincte.

@@ -1,0 +1,684 @@
+/* Oujda-Angads identity; passenger pages only. */
+.public-shell {
+  --ink: #132d46;
+  --brand: #194a72;
+  --brand-dark: #102e4c;
+  --paper: #f5f7fa;
+  --muted: #5d6d7e;
+  --line: #dde4ec;
+  background: var(--paper);
+  color: var(--ink);
+}
+.public-shell .utility-bar {
+  background: #102b44;
+  color: #e4eaf2;
+}
+.public-shell .site-header {
+  background: #fffffff5;
+  border-bottom-color: #e1e7ee;
+}
+.public-shell .brand-icon {
+  background: #173c5e;
+  border-radius: 50%;
+}
+.public-shell .brand {
+  color: #122f4c;
+}
+.public-shell .brand-blue {
+  color: #b17a30;
+}
+.public-shell .brand small {
+  color: #586c81;
+}
+.public-shell .site-header nav a {
+  color: #526478;
+}
+.public-shell .site-header nav a.active {
+  color: #173c5e;
+}
+.public-shell .site-header nav a.active:after {
+  background: #cda35d;
+  height: 3px;
+}
+.public-shell .language-picker {
+  color: #526478;
+}
+.public-shell .account-btn {
+  border-color: #cad5e1;
+  color: #173c5e;
+  border-radius: 24px;
+}
+.public-shell .btn.primary {
+  background: #194a72;
+  border-color: #194a72;
+}
+.public-shell .btn.primary:hover {
+  background: #102e4c;
+  border-color: #102e4c;
+}
+.public-shell .text-link {
+  color: #194a72;
+}
+.public-shell .eyebrow {
+  color: #715322;
+}
+.public-shell .site-footer {
+  background: #102b44;
+}
+.public-shell .site-footer .brand {
+  color: #fff;
+}
+.public-shell .site-footer .brand small {
+  color: #c5d5e3;
+}
+.public-shell .floating-chat {
+  background: #194a72;
+}
+.public-shell .footer-bottom {
+  border-color: #ffffff26;
+}
+
+.public-shell .airport-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: #112d48;
+  color: #fff;
+  border-radius: 22px;
+  min-height: 530px;
+  padding: 52px 48px 80px;
+  margin-bottom: 26px;
+}
+.airport-hero-photo {
+  position: absolute;
+  inset-block: 0;
+  inset-inline-end: 0;
+  width: 69%;
+  height: 100%;
+  z-index: -2;
+  object-fit: cover;
+  object-position: 50% 40%;
+}
+.airport-hero-shade {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(
+      90deg,
+      #112d48 0%,
+      #112d48 31%,
+      #112d48e8 43%,
+      #112d4840 63%,
+      #112d4800 100%
+    ),
+    linear-gradient(0deg, #0c2239c9, transparent 38%);
+}
+.airport-hero-content {
+  position: relative;
+  max-width: 54%;
+}
+.airport-hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+  font-weight: 650;
+  letter-spacing: 2.2px;
+  color: #f4d49c;
+}
+.airport-hero-eyebrow > span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #e8bf79;
+  box-shadow: 0 0 0 5px #e8bf7917;
+  flex-shrink: 0;
+}
+.public-shell .airport-hero h1 {
+  margin: 24px 0 22px;
+  color: #fff;
+  font-size: clamp(38px, 4.6vw, 62px);
+  line-height: 1.12;
+  letter-spacing: -2.6px;
+  font-weight: 600;
+}
+.airport-hero h1 em {
+  color: #f1cb88;
+  font-style: normal;
+  font-weight: 400;
+}
+.airport-hero-content > p {
+  max-width: 435px;
+  color: #e0e8ef;
+  font-size: 14px;
+  line-height: 1.85;
+}
+.airport-hero-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 28px;
+}
+.airport-hero-actions a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 47px;
+  font-size: 12px;
+  font-weight: 650;
+}
+.airport-hero-actions .airport-hero-primary {
+  color: #172c40;
+  background: #efcb8d;
+  border: 1px solid #efcb8d;
+  padding: 12px 17px;
+  border-radius: 8px;
+}
+.airport-hero-actions .airport-hero-primary:hover {
+  background: #ffdfa6;
+}
+.airport-hero-actions .airport-hero-secondary {
+  color: #fff;
+}
+.airport-hero-actions a:focus-visible,
+.airport-photo-credit a:focus-visible {
+  outline: 3px solid #efcb8d;
+  outline-offset: 4px;
+}
+.airport-hero-languages {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #d1dde8;
+  font-size: 11px;
+  margin-top: 25px;
+}
+.airport-hero-stamp {
+  position: absolute;
+  inset-inline-end: 26px;
+  top: 25px;
+  text-align: end;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  background: #102d48c9;
+  border: 1px solid #ffffff3d;
+  padding: 12px 16px;
+  border-radius: 10px;
+}
+.airport-hero-stamp span {
+  font-size: 8px;
+  letter-spacing: 1.4px;
+}
+.airport-hero-stamp strong {
+  font-size: 46px;
+  line-height: 1.15;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+.airport-hero-footer {
+  position: absolute;
+  inset-inline: 28px;
+  bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 12px;
+  color: #fff;
+}
+.airport-hero-location {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+}
+.airport-photo-credit {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 5px;
+  background: #102a43e8;
+  border-radius: 5px;
+  padding: 5px 8px;
+  font-size: 9px;
+  line-height: 1.6;
+}
+.airport-photo-credit a {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.public-shell .airport-hero-flights,
+.public-shell .airport-hero-tracking {
+  min-height: 335px;
+  padding-block: 38px 75px;
+}
+.public-shell .airport-hero-flights h1,
+.public-shell .airport-hero-tracking h1 {
+  font-size: clamp(30px, 3.6vw, 45px);
+  margin-block: 18px 14px;
+  letter-spacing: -1.8px;
+}
+.airport-hero-flights .airport-hero-actions {
+  margin-top: 20px;
+}
+.airport-hero-actions .airport-page-official {
+  background: #ffffff12;
+  border-color: #ffffff66;
+  color: #fff;
+  min-height: 40px;
+}
+.public-shell .airport-page,
+.public-shell .tracking-page {
+  padding-top: 26px;
+}
+.public-shell .tracking-source-strip {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  margin-block: -12px 20px;
+  font-size: 12px;
+  color: #5d6d7e;
+}
+.tracking-source-strip strong {
+  color: #183c5c;
+}
+
+.public-shell .welcome-section {
+  background: #f5f7fa;
+  padding: 26px 0 0;
+}
+.public-shell .welcome-section .airport-hero {
+  margin-bottom: 0;
+  min-height: 560px;
+  padding-bottom: 105px;
+}
+.public-shell .welcome-section .airport-hero-footer {
+  bottom: 43px;
+}
+.public-shell .flight-finder {
+  margin: -26px 28px 0;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px #1538570c;
+  border-color: #e2e7ee;
+}
+.public-shell .finder-plane {
+  color: #194a72;
+  background: #edf3f9;
+  border-radius: 50%;
+}
+.public-shell .finder-directions button.selected {
+  color: #173c5e;
+  border-color: #be8e43;
+}
+.public-shell .finder-demo {
+  color: #596b7b;
+}
+.public-shell .finder-form input::placeholder {
+  color: #687a8a;
+}
+.public-shell .finder-form label {
+  color: #526b7d;
+}
+.public-shell .essential-shortcuts {
+  padding: 35px 0 32px;
+  border: 0;
+}
+.public-shell .essential-shortcuts > p {
+  color: #596b7b;
+  font-size: 10px;
+  margin-bottom: 18px;
+}
+.public-shell .essential-shortcuts > div {
+  gap: 12px;
+}
+.public-shell .essential-shortcuts a {
+  border: 1px solid #e1e7ed;
+  border-radius: 12px;
+  min-height: 76px;
+  background: white;
+  color: #27445d;
+  gap: 9px;
+  box-shadow: 0 4px 15px #15385703;
+}
+.public-shell .essential-shortcuts a:hover {
+  background: #edf3f9;
+  border-color: #b4c5d7;
+}
+.public-shell .essential-shortcuts a > svg:first-child {
+  color: #946924;
+}
+.public-shell .tracking-entry {
+  background: #eaf0f6;
+  border-color: #d6e1ed;
+  color: #224b70;
+}
+.public-shell .travel-checklist {
+  background: #eaf0f7;
+  border-color: #d7e2ee;
+}
+.public-shell .travel-checklist h3 {
+  color: #173b5b;
+}
+.public-shell .checklist-check {
+  border-color: #abbdd0;
+}
+.public-shell .is-done .checklist-check {
+  background: #194a72;
+  border-color: #194a72;
+}
+.public-shell .service-card {
+  border-color: #e0e6ee;
+  border-radius: 16px;
+  background: white;
+}
+.public-shell .service-card:hover {
+  border-color: #b0c3d7;
+  box-shadow: 0 10px 30px #1338550b;
+  transform: translateY(-3px);
+}
+.public-shell .service-icon {
+  background: #eef3f8;
+  color: #244e73;
+}
+.public-shell .intelligent-assistant {
+  background: #122f4b;
+  border-radius: 22px;
+}
+.public-shell .assistant-spotlight-copy .eyebrow {
+  color: #efd19b;
+}
+.public-shell .assistant-spotlight-copy h2 {
+  color: #fff;
+}
+.public-shell .assistant-spotlight-copy > p {
+  color: #d1dfec;
+}
+.public-shell .feedback-strip {
+  border-color: #dce4ed;
+}
+.public-shell .feedback-icon {
+  background: #ecf1f7;
+  color: #194a72;
+}
+
+.public-shell .airport-view-nav {
+  background: #e9eef4;
+  border-color: #dce4ee;
+  border-radius: 10px;
+}
+.public-shell .airport-view-nav a {
+  color: #50667e;
+}
+.public-shell .airport-view-nav a.active {
+  background: #194a72;
+  color: #fff;
+}
+.public-shell .airport-page-filters {
+  border-color: #dce4ee;
+  border-radius: 10px;
+}
+.public-shell .airport-page-filters summary {
+  color: #254865;
+}
+.public-shell .airport-board {
+  --airport-board-charcoal: #132e48;
+  --airport-board-gold: #edc988;
+  --airport-board-line: #e0e6ed;
+  border-color: #dce4ee;
+  border-radius: 16px;
+  background: #f0f4f8;
+}
+.public-shell .airport-board .airport-board-header {
+  padding: 24px 30px;
+}
+.public-shell .airport-board .airport-board-header h2 {
+  font-size: 27px;
+}
+.public-shell .airport-board .airport-board-date {
+  background: #e8eef5;
+  border-color: #dce4ee;
+}
+.public-shell .airport-board .airport-board-date h3 {
+  color: #294a67;
+}
+.public-shell .airport-board .airport-board-columns {
+  background: #f0f4f8;
+  color: #526479;
+}
+.public-shell .airport-board .airport-board-flight {
+  background: #fff;
+}
+.public-shell .airport-board .airport-board-flight:nth-child(even) {
+  background: #f5f7fa;
+}
+.public-shell .airport-board .airport-board-row:hover,
+.public-shell .airport-board .is-expanded > .airport-board-row {
+  background: #eaf1f8;
+}
+.public-shell .airport-board .airport-board-city,
+.public-shell .airport-board .airport-board-time strong {
+  color: #173c5e;
+}
+.public-shell .airport-board .airport-board-estimated strong {
+  color: #5d6d7e;
+}
+.public-shell .airport-board .airport-board-flight-meta,
+.public-shell .airport-board .airport-board-time small {
+  color: #576b7f;
+}
+.public-shell .airport-board .airport-board-flight-meta > bdi {
+  color: #294c6c;
+}
+.public-shell .airport-board .airport-board-expand {
+  color: #526b83;
+}
+.public-shell .airport-board .airport-board-detail {
+  background: #edf3f9;
+  border-color: #dae3ed;
+}
+.public-shell .airport-board .airport-board-detail-link {
+  color: #194a72;
+}
+.public-shell .airport-board .airport-board-tabs {
+  border-color: #2d455b;
+}
+.public-shell .mobile-bottom-nav {
+  border-top-color: #dbe3ec;
+}
+.public-shell .mobile-bottom-nav a {
+  color: #586f83;
+}
+.public-shell .mobile-bottom-nav a.active {
+  background: #edf2f8;
+  color: #194a72;
+}
+
+[dir="rtl"] .airport-hero-shade {
+  background:
+    linear-gradient(
+      270deg,
+      #112d48 0%,
+      #112d48 31%,
+      #112d48e8 43%,
+      #112d4840 63%,
+      #112d4800 100%
+    ),
+    linear-gradient(0deg, #0c2239c9, transparent 38%);
+}
+.public-shell[dir="rtl"] .airport-hero h1,
+[dir="rtl"] .public-shell .airport-hero h1 {
+  letter-spacing: 0;
+  line-height: 1.5;
+}
+[dir="rtl"] .airport-hero-eyebrow,
+[dir="rtl"] .airport-hero-stamp span {
+  letter-spacing: 0;
+}
+@media (max-width: 1100px) {
+  .public-shell .airport-hero {
+    padding-inline: 32px;
+  }
+  .public-shell .airport-hero h1 {
+    font-size: 46px;
+  }
+  .public-shell .essential-shortcuts a {
+    flex-direction: column;
+    padding: 14px 5px;
+    font-size: 11px;
+  }
+  .public-shell .essential-shortcuts a > svg:last-child {
+    display: none;
+  }
+  .airport-hero-actions {
+    gap: 10px;
+  }
+}
+@media (max-width: 760px) {
+  .public-shell .welcome-section,
+  .public-shell .airport-page,
+  .public-shell .tracking-page {
+    padding-top: 18px;
+  }
+  .public-shell .airport-hero,
+  .public-shell .welcome-section .airport-hero {
+    padding: 0;
+    min-height: 0;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+  }
+  .airport-hero-photo {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    height: 235px;
+    z-index: 0;
+    object-position: 50% 40%;
+  }
+  .airport-hero-shade {
+    display: none;
+  }
+  .airport-hero-content {
+    max-width: 100%;
+    padding: 27px 24px 23px;
+  }
+  .public-shell .airport-hero h1 {
+    font-size: clamp(31px, 6vw, 42px);
+    margin: 18px 0;
+    letter-spacing: -1.5px;
+  }
+  .airport-hero-content > p {
+    font-size: 13px;
+    line-height: 1.8;
+  }
+  .airport-hero-eyebrow {
+    font-size: 9px;
+    letter-spacing: 1.6px;
+  }
+  .airport-hero-stamp {
+    top: 15px;
+    inset-inline-end: 15px;
+    padding: 9px 12px;
+  }
+  .airport-hero-stamp strong {
+    font-size: 32px;
+  }
+  .airport-hero-stamp span {
+    font-size: 7px;
+  }
+  .airport-hero-actions {
+    gap: 14px;
+    margin-top: 22px;
+  }
+  .airport-hero-actions a {
+    font-size: 11px;
+  }
+  .airport-hero-languages {
+    font-size: 10px;
+    margin-top: 20px;
+  }
+  .airport-hero-footer {
+    position: relative;
+    inset: auto;
+    padding: 0 24px 22px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .public-shell .welcome-section .airport-hero-footer {
+    bottom: auto;
+  }
+  .airport-hero-location {
+    font-size: 10px;
+  }
+  .airport-photo-credit {
+    justify-content: flex-start;
+    font-size: 9px;
+    background: #0b2239;
+  }
+  .public-shell .airport-hero-flights,
+  .public-shell .airport-hero-tracking {
+    min-height: 0;
+    padding: 0;
+  }
+  .public-shell .airport-hero-flights h1,
+  .public-shell .airport-hero-tracking h1 {
+    font-size: 32px;
+  }
+  .public-shell .flight-finder {
+    margin: 16px 0 0;
+  }
+  .public-shell .essential-shortcuts > div {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  .public-shell .essential-shortcuts {
+    padding: 28px 0;
+  }
+  .public-shell .essential-shortcuts a {
+    border: 1px solid #e1e7ed;
+    min-height: 85px;
+  }
+  .public-shell .airport-board .airport-board-header {
+    padding: 23px 21px;
+  }
+  .public-shell .airport-board .airport-board-header h2 {
+    font-size: 24px;
+  }
+}
+@media (max-width: 380px) {
+  .airport-hero-content {
+    padding-inline: 20px;
+  }
+  .public-shell .airport-hero h1 {
+    font-size: 30px;
+  }
+  .airport-hero-photo {
+    height: 205px;
+  }
+  .airport-hero-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 7px;
+  }
+  .airport-hero-actions .airport-hero-primary {
+    padding-inline: 14px;
+  }
+  .airport-hero-languages {
+    margin-top: 15px;
+  }
+  .airport-hero-footer {
+    padding-inline: 20px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .public-shell .service-card:hover {
+    transform: none;
+  }
+}

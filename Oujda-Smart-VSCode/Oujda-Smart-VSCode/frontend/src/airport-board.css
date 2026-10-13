@@ -1,0 +1,666 @@
+.airport-board {
+  --airport-board-gold: #dcc182;
+  --airport-board-charcoal: #242c2e;
+  --airport-board-line: #d9dfdc;
+  border: 1px solid #d2dad5;
+  border-radius: 15px;
+  overflow: hidden;
+  background: #e9edeb;
+  color: #263d37;
+  box-shadow: 0 12px 35px #263d3707;
+}
+.airport-board .airport-board-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  padding: 28px 30px;
+  background: var(--airport-board-charcoal);
+  color: #f2f4ee;
+}
+.airport-board .airport-board-identity {
+  min-width: 0;
+}
+.airport-board .airport-board-brand {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 9px;
+  letter-spacing: 1.8px;
+  color: #c1cbc2;
+  font-weight: 650;
+}
+.airport-board .airport-board-brand svg {
+  color: var(--airport-board-gold);
+  flex-shrink: 0;
+}
+.airport-board .airport-board-header h2 {
+  margin: 12px 0 10px;
+  font-size: clamp(24px, 3vw, 36px);
+  font-weight: 550;
+  line-height: 1.25;
+  color: #f3f3ec;
+  letter-spacing: -0.035em;
+}
+.airport-board .airport-board-location {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+  color: var(--airport-board-gold);
+  font-size: 13px;
+  font-weight: 650;
+  letter-spacing: 2.2px;
+}
+.airport-board .airport-board-location bdi > span {
+  opacity: 0.5;
+  margin-inline: 5px;
+}
+.airport-board .airport-board-clock {
+  text-align: end;
+  flex-shrink: 0;
+  border-inline-start: 1px solid #526059;
+  padding-inline-start: 28px;
+}
+.airport-board .airport-board-clock > span {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 6px;
+  font-size: 10px;
+  color: #b9c7bc;
+}
+.airport-board .airport-board-clock time {
+  display: block;
+}
+.airport-board .airport-board-clock strong {
+  display: block;
+  font-size: 29px;
+  line-height: 1.5;
+  color: var(--airport-board-gold);
+  font-weight: 550;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 1px;
+}
+.airport-board .airport-board-clock small {
+  font-size: 10px;
+  color: #c6d0c6;
+}
+.airport-board .airport-board-demo {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  border-bottom: 1px solid #daceac;
+  padding: 14px 25px;
+  background: #f5eedb;
+  color: #785d27;
+}
+.airport-board .airport-board-demo strong {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  line-height: 1.5;
+  flex-shrink: 0;
+}
+.airport-board .airport-board-demo strong svg {
+  flex-shrink: 0;
+}
+.airport-board .airport-board-demo p {
+  font-size: 11px;
+  line-height: 1.7;
+  margin: 0;
+}
+.airport-board .airport-board-body {
+  min-height: 190px;
+}
+.airport-board .airport-board-date {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 17px 24px 13px;
+  background: #dfe5e1;
+  border-top: 1px solid #d4ddd6;
+}
+.airport-board .airport-board-date h3 {
+  margin: 0;
+  font-size: 13px;
+  color: #425c4e;
+  font-weight: 650;
+  letter-spacing: 0;
+  line-height: 1.65;
+}
+.airport-board .airport-board-date > span {
+  flex-shrink: 0;
+  color: #566952;
+  font-size: 10px;
+  white-space: nowrap;
+}
+.airport-board .airport-board-columns {
+  display: grid;
+  grid-template-columns: 185px minmax(0, 1fr) 165px 28px;
+  gap: 16px;
+  padding: 10px 25px;
+  background: #e9edeb;
+  font-size: 9px;
+  color: #566952;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+.airport-board .airport-board-flight-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.airport-board .airport-board-flight {
+  border-top: 1px solid var(--airport-board-line);
+  background: #f5f7f5;
+}
+.airport-board .airport-board-flight:nth-child(even) {
+  background: #ecefed;
+}
+.airport-board .airport-board-row {
+  display: grid;
+  grid-template-columns: 185px minmax(0, 1fr) 165px 28px;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 25px;
+  width: 100%;
+  text-align: start;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  font-family: inherit;
+  min-height: 91px;
+  transition: background-color 0.15s;
+}
+.airport-board .airport-board-row:hover {
+  background: #e4ebe5;
+}
+.airport-board .airport-board-row:focus-visible {
+  outline: 2px solid #39795c;
+  outline-offset: -3px;
+}
+.airport-board .airport-board-times {
+  display: flex;
+  gap: 22px;
+  align-items: start;
+  font-variant-numeric: tabular-nums;
+}
+.airport-board .airport-board-time {
+  min-width: 0;
+}
+.airport-board .airport-board-time small {
+  display: block;
+  font-size: 9px;
+  color: #566952;
+  margin-bottom: 4px;
+  font-weight: 400;
+}
+.airport-board .airport-board-time strong {
+  display: block;
+  font-size: 23px;
+  line-height: 1.25;
+  font-weight: 550;
+  color: #2c4838;
+  white-space: nowrap;
+  letter-spacing: -0.5px;
+}
+.airport-board .airport-board-estimated strong {
+  color: #566952;
+  font-size: 20px;
+  line-height: 1.45;
+}
+.airport-board .airport-board-route {
+  display: block;
+  min-width: 0;
+}
+.airport-board .airport-board-city {
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+  flex-wrap: wrap;
+  font-size: 19px;
+  line-height: 1.45;
+  font-weight: 550;
+  color: #304e3a;
+  overflow-wrap: anywhere;
+}
+.airport-board .airport-board-city > bdi {
+  font-size: 10px;
+  color: #566952;
+  padding: 2px 5px;
+  background: #dfe8df;
+  border-radius: 3px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+}
+.airport-board .airport-board-flight-meta {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 11px;
+  color: #566952;
+  margin-top: 5px;
+  line-height: 1.5;
+}
+.airport-board .airport-board-flight-meta > bdi {
+  color: #4c6950;
+  font-weight: 650;
+}
+.airport-board .airport-board-meta-dot {
+  display: block;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #a4b19c;
+  flex-shrink: 0;
+}
+.airport-board .airport-board-status-slot {
+  min-width: 0;
+}
+.airport-board .airport-board-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 10px;
+  border-radius: 5px;
+  background: #e5eae5;
+  color: #55684f;
+  font-size: 10px;
+  font-weight: 650;
+  line-height: 1.5;
+}
+.airport-board .airport-board-status i {
+  display: block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: currentColor;
+  flex-shrink: 0;
+}
+.airport-board .airport-board-status-ON_TIME,
+.airport-board .airport-board-status-ARRIVED {
+  color: #34754f;
+  background: #e1eddf;
+}
+.airport-board .airport-board-status-BOARDING {
+  color: #346a81;
+  background: #e2ecef;
+}
+.airport-board .airport-board-status-DELAYED {
+  color: #805a20;
+  background: #f4e7c9;
+}
+.airport-board .airport-board-status-CANCELLED {
+  color: #96463d;
+  background: #f5dfd9;
+}
+.airport-board .airport-board-expand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #60755d;
+  min-width: 24px;
+}
+.airport-board .airport-board-expand svg {
+  transition: transform 0.15s;
+}
+.airport-board .is-expanded .airport-board-expand svg {
+  transform: rotate(180deg);
+}
+.airport-board .is-expanded > .airport-board-row {
+  background: #e2eae2;
+}
+.airport-board .airport-board-detail {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  border-top: 1px solid #d2dfd0;
+  padding: 18px 25px;
+  background: #f6f9f3;
+}
+.airport-board .airport-board-detail[hidden] {
+  display: none;
+}
+.airport-board .airport-board-detail dl {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin: 0;
+  min-width: 0;
+}
+.airport-board .airport-board-detail dl > div {
+  min-width: 80px;
+}
+.airport-board .airport-board-detail dt {
+  color: #566952;
+  font-size: 10px;
+  margin-bottom: 5px;
+}
+.airport-board .airport-board-detail dd {
+  margin: 0;
+  color: #496143;
+  font-size: 13px;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+.airport-board .airport-board-detail-link {
+  display: inline-flex;
+  gap: 6px;
+  align-items: center;
+  color: #176b62;
+  font-size: 11px;
+  min-height: 40px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+.airport-board .airport-board-tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.2fr;
+  border-top: 1px solid #38413d;
+  background: var(--airport-board-charcoal);
+  padding: 0 14px;
+}
+.airport-board .airport-board-tabs > button,
+.airport-board .airport-board-tabs > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 7px;
+  min-height: 82px;
+  padding: 14px 12px 12px;
+  color: #a8b7aa;
+  font-family: inherit;
+  font-size: 11px;
+  line-height: 1.5;
+  text-align: center;
+  font-weight: 550;
+  border: 0;
+  border-radius: 0;
+  border-top: 3px solid transparent;
+  background: transparent;
+  cursor: pointer;
+}
+.airport-board .airport-board-tabs > button[aria-pressed="true"] {
+  color: var(--airport-board-gold);
+  border-top-color: var(--airport-board-gold);
+  background: #5b573b19;
+}
+.airport-board .airport-board-tabs > button:hover,
+.airport-board .airport-board-tabs > a:hover {
+  color: #f0f0de;
+  background: #ffffff08;
+}
+.airport-board .airport-board-tabs > button:focus-visible,
+.airport-board .airport-board-tabs > a:focus-visible {
+  outline: 2px solid var(--airport-board-gold);
+  outline-offset: -5px;
+}
+.airport-board .airport-board-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 210px;
+  padding: 28px;
+  text-align: center;
+  color: #566952;
+}
+.airport-board .airport-board-empty h3 {
+  font-size: 18px;
+  margin: 0;
+  color: #4a6844;
+}
+.airport-board .airport-board-empty p {
+  font-size: 12px;
+  line-height: 1.7;
+  margin: 0;
+}
+.airport-board .airport-board-loader {
+  animation: airport-board-spin 1.2s linear infinite;
+}
+.airport-board .airport-board-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.airport-board[dir="rtl"] .airport-board-header h2,
+.airport-board[dir="rtl"] .airport-board-brand {
+  letter-spacing: 0;
+}
+.airport-board[dir="rtl"] .airport-board-header h2 {
+  line-height: 1.55;
+}
+@keyframes airport-board-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media (max-width: 1000px) {
+  .airport-board .airport-board-columns,
+  .airport-board .airport-board-row {
+    grid-template-columns: 150px minmax(0, 1fr) 140px 24px;
+    gap: 12px;
+    padding-inline: 20px;
+  }
+  .airport-board .airport-board-times {
+    gap: 15px;
+  }
+  .airport-board .airport-board-time strong {
+    font-size: 21px;
+  }
+  .airport-board .airport-board-estimated strong {
+    font-size: 19px;
+  }
+  .airport-board .airport-board-demo {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 760px) {
+  .airport-board .airport-board-header {
+    padding: 23px 21px;
+    flex-wrap: wrap;
+    gap: 18px;
+  }
+  .airport-board .airport-board-header h2 {
+    font-size: 27px;
+  }
+  .airport-board .airport-board-clock {
+    width: 100%;
+    text-align: start;
+    border-inline-start: 0;
+    border-top: 1px solid #526059;
+    padding-inline-start: 0;
+    padding-top: 13px;
+  }
+  .airport-board .airport-board-clock > span {
+    justify-content: flex-start;
+    font-size: 9px;
+  }
+  .airport-board .airport-board-clock time {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .airport-board .airport-board-clock strong {
+    font-size: 25px;
+  }
+  .airport-board .airport-board-clock small {
+    font-size: 9px;
+    text-align: end;
+  }
+  .airport-board .airport-board-demo {
+    padding: 13px 20px;
+    gap: 5px;
+  }
+  .airport-board .airport-board-demo strong {
+    font-size: 12px;
+  }
+  .airport-board .airport-board-demo p {
+    font-size: 10px;
+  }
+  .airport-board .airport-board-date {
+    padding: 13px 17px;
+    gap: 12px;
+  }
+  .airport-board .airport-board-date h3 {
+    font-size: 11px;
+  }
+  .airport-board .airport-board-date > span {
+    font-size: 9px;
+  }
+  .airport-board .airport-board-columns {
+    display: none;
+  }
+  .airport-board .airport-board-row {
+    grid-template-columns: 93px minmax(0, 1fr) 24px;
+    gap: 6px 12px;
+    padding: 17px;
+    min-height: 112px;
+  }
+  .airport-board .airport-board-times {
+    grid-column: 1;
+    grid-row: 1/3;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .airport-board .airport-board-time small {
+    font-size: 9px;
+    margin-bottom: 1px;
+  }
+  .airport-board .airport-board-time strong {
+    font-size: 23px;
+  }
+  .airport-board .airport-board-estimated strong {
+    font-size: 20px;
+  }
+  .airport-board .airport-board-route {
+    grid-column: 2;
+    grid-row: 1;
+    align-self: end;
+  }
+  .airport-board .airport-board-city {
+    font-size: 18px;
+    gap: 5px;
+  }
+  .airport-board .airport-board-flight-meta {
+    gap: 5px;
+    font-size: 10px;
+    margin-top: 4px;
+  }
+  .airport-board .airport-board-status-slot {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: start;
+  }
+  .airport-board .airport-board-status {
+    font-size: 9px;
+    padding: 5px 7px;
+    gap: 5px;
+  }
+  .airport-board .airport-board-expand {
+    grid-column: 3;
+    grid-row: 1/3;
+  }
+  .airport-board .airport-board-detail {
+    padding: 17px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .airport-board .airport-board-detail dl {
+    gap: 15px;
+    flex: 1;
+  }
+  .airport-board .airport-board-detail-link {
+    min-height: 40px;
+    font-size: 11px;
+  }
+  .airport-board .airport-board-tabs {
+    padding-inline: 5px;
+    grid-template-columns: 1fr 1fr 1.25fr;
+  }
+  .airport-board .airport-board-tabs > button,
+  .airport-board .airport-board-tabs > a {
+    min-height: 83px;
+    padding: 12px 5px 10px;
+    gap: 6px;
+    font-size: 10px;
+  }
+  .airport-board .airport-board-tabs svg {
+    width: 19px;
+    height: 19px;
+  }
+}
+@media (max-width: 380px) {
+  .airport-board {
+    border-radius: 11px;
+  }
+  .airport-board .airport-board-header {
+    padding: 20px 16px;
+  }
+  .airport-board .airport-board-header h2 {
+    font-size: 24px;
+  }
+  .airport-board .airport-board-brand {
+    font-size: 8px;
+    letter-spacing: 1.2px;
+  }
+  .airport-board .airport-board-row {
+    grid-template-columns: 73px minmax(0, 1fr) 20px;
+    padding: 15px 12px;
+    gap: 7px;
+  }
+  .airport-board .airport-board-city {
+    font-size: 16px;
+  }
+  .airport-board .airport-board-times {
+    gap: 9px;
+  }
+  .airport-board .airport-board-time strong {
+    font-size: 22px;
+  }
+  .airport-board .airport-board-estimated strong {
+    font-size: 19px;
+  }
+  .airport-board .airport-board-flight-meta {
+    font-size: 9px;
+  }
+  .airport-board .airport-board-demo {
+    padding-inline: 15px;
+  }
+  .airport-board .airport-board-date {
+    padding-inline: 12px;
+  }
+  .airport-board .airport-board-clock time {
+    flex-wrap: wrap;
+    gap: 3px;
+  }
+  .airport-board .airport-board-tabs > button,
+  .airport-board .airport-board-tabs > a {
+    font-size: 9px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .airport-board .airport-board-loader {
+    animation: none;
+  }
+  .airport-board .airport-board-row,
+  .airport-board .airport-board-expand svg {
+    transition: none;
+  }
+}

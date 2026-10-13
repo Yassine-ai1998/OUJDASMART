@@ -1,0 +1,27 @@
+{
+  "name": "oujda-smart-backend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "node --watch src/server.js",
+    "start": "node src/server.js",
+    "db:init": "node scripts/init.js",
+    "test": "node --test tests/*.test.js"
+  },
+  "dependencies": {
+    "express": "^4.22.1",
+    "cors": "^2.8.5",
+    "helmet": "^7.2.0",
+    "express-rate-limit": "^7.5.0",
+    "bcryptjs": "^3.0.2",
+    "jsonwebtoken": "^9.0.2",
+    "dotenv": "^16.4.5",
+    "pg": "^8.13.0",
+    "zod": "^3.23.8",
+    "@electric-sql/pglite": "^0.5.8"
+  }
+}
